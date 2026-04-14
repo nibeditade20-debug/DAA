@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 void selectionSort(int a[], int n, int i)
 {
     if(i == n-1)
@@ -17,3 +19,24 @@ void selectionSort(int a[], int n, int i)
 
     selectionSort(a, n, i+1);
 }
+
+int main()
+{
+    int a[100], n, i;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter elements:\n");
+    for(i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+
+    selectionSort(a, n, 0);
+
+    printf("Sorted array:\n");
+    for(i = 0; i < n; i++)
+        printf("%d ", a[i]);
+
+    return 0;
+}
+    
